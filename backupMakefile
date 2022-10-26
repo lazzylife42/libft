@@ -14,7 +14,7 @@ MY_SOURCES = main.c \
 
 MY_OBJECTS = $(MY_SOURCES: .c=.o)
 
-all: $(NAME)
+MAIN = main
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
