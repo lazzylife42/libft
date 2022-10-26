@@ -13,8 +13,13 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 int	main(void)
 {
+	int a;
+	a = ft_digit(104);
+
+	printf("a out : %i", a);
 	return 0;
 }
