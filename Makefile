@@ -10,9 +10,13 @@ MY_SOURCES = main.c \
 	ft_isascii.c \
 	ft_isdigit.c \
 	ft_isprint.c \
-	ft_strlen 
+	ft_strlen \
+	ft_memset.c
 
 MY_OBJECTS = $(MY_SOURCES: .c=.o)
+
+$(NAME): $(OBJS)
+	$(CC) $(OBJS) -o $(NAME)
 
 all: $(NAME)
 
