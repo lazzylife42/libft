@@ -10,30 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 #include <unistd.h>
 
-void *ft_bzero(void *str, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	if (n == '0')
-		return (str);
-	else
-	{
-		unsigned int i;
-		unsigned char *buffer;
-	
-		i = 0;
-    	buffer = str;
-
-    	while (i < n)
-    	{
-        	buffer[i] = '\0';
-        	i++;
-    	}
-    return (buffer);
-	}
+	ft_memset(s, 0, n);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 int main()
@@ -53,3 +37,4 @@ int main()
 	printf("\n\nString after ft_bzero()\n%s\n", nonString);
     return 0;
 }
+*/

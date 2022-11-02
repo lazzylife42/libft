@@ -15,11 +15,20 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	main(void)
+int main(void)
 {
-	int a;
-	a = ft_digit(104);
-
-	printf("a out : %i", a);
-	return 0;
+    int n = 10;
+    int arr[n];
+  
+    ft_bzero(arr, 7);
+    printf("\nArray after ft_bzero()\n");
+	for (int i=0; i<n; i++)
+      printf("%d ", arr[i]);  
+	unsigned char	string[48] = "heguyzzhorudoinlmaoooilikepizza";
+	ft_bzero(string, 15*sizeof(string[0]));
+	printf("\n\nString after ft_bzero()\n%s\n", string);
+	unsigned char	nonString[48] = "heguyzzhorudoinlmaoooilikepizza";
+	ft_bzero(nonString, 0);
+	printf("\n\nString after ft_bzero()\n%s\n", nonString);
+    return 0;
 }
