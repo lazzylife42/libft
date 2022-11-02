@@ -1,33 +1,39 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/11/02 12:38:23 by smonte-e          #+#    #+#              #
+#    Updated: 2022/11/02 13:38:17 by smonte-e         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLACGS = -Wall -Wextra -Werror
 
-MY_SOURCES = main.c \
-	ft_isalnum.c \
-	ft_isalpha.c \
-	ft_isascii.c \
-	ft_isdigit.c \
-	ft_isprint.c \
-	ft_strlen \
-	ft_memset.c
+MY_SOURCES = ft_isalnum.c \
+    ft_isalpha.c \
+    ft_isascii.c \
+    ft_isdigit.c \
+    ft_isprint.c \
+    ft_strlen.c \
+    ft_memset.c\
+    ft_bzero.c
 
 MY_OBJECTS = $(MY_SOURCES: .c=.o)
 
-$(NAME): $(OBJS)
-	$(CC) $(OBJS) -o $(NAME)
-
 all: $(NAME)
+
+$(NAME):
+	$(CC) -o $(MY_OBJECTS) $(MY_SOURCES)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-libft: main.c
-	$(CC) -c main.c
-
-main: main.o
-	$(CC) main.o -o main
-
-clean: rm -f *.o
-
+clean:
+	rm -f *.o
