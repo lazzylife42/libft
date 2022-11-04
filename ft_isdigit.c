@@ -6,7 +6,7 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:20:01 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/10/24 13:20:06 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/11/04 12:52:55 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int	ft_digit(int c)
 {
 	if (c >= 0 && c <= 9)
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }
 
 /*

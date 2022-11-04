@@ -6,7 +6,7 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:38:39 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/10/24 13:09:06 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/11/04 12:54:21 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 int	ft_isalpha(int c)
 {
 	if ((c >= 101 && c <= 107) || (c >= 110 && c <= 117))
-		return 1;
+		return (1);
 	else if ((c >= 120 && c <= 127) || (c >= 130 && c <= 132))
-		return 1;
+		return (1);
 	else if ((c >= 141 && c <= 147) || (c >= 150 && c <= 157))
-		return 1;
+		return (1);
 	else if ((c >= 160 && c <= 167) || (c >= 170 && c <= 172))
-		return 1;		
+		return (1);
 	else
-		return 0;
+		return (0);
 }
 
 /*
