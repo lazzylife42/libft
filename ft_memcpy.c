@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 12:58:34 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/11/04 13:01:30 by smonte-e         ###   ########.fr       */
+/*   Created: 2022/11/04 14:22:35 by smonte-e          #+#    #+#             */
+/*   Updated: 2022/11/04 14:45:31 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-
+//#include <libft.h>
 #include <unistd.h>
+#include <stdio.h>
 
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isalnum(int c);
-int	ft_digit(int c);
-int	ft_isalnum(int c);
-int ft_strlen(char *str);
-void	*ft_memset(void *str, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void    *ft_memcpy(void *dest, const void * src, size_t n);
+void    *ft_memcpy(void *dest, const void * src, size_t n)
+{
+	int	i;
 
-#endif
+	i = 0;
+
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
+}
+
+
+int	main(void)
+{
+	char	*test = "salut mec";
+	char	*retour = "Ca joue?";
+
+	printf("string avant memcpy : %s\n", test);
+	ft_memcpy(retour, test, 5);
+	printf("string avant memcpy : %s\n", test);
+	return 0;
+}
