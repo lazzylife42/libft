@@ -10,32 +10,43 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <libft.h>
-#include <unistd.h>
-#include <stdio.h>
+#include <libft.h>
+//#include <unistd.h>
+//#include <stdio.h>
 
-void    *ft_memcpy(void *dest, const void * src, size_t n)
+
+void	*ft_memcpy(void *dest, const void * src, size_t n)
 {
-	int	i;
+	unsigned char	*coppy;
+	unsigned char	*paste;
 
-	i = 0;
-
-	while (i < n)
+	if (dest == src)
+		return (dest);
+	coppy = (unsigned char *)src;
+	paste = (unsigned char *)dest;
+	while(n--)
 	{
-		dest[i] = src[i];
-		i++;
+		*paste++ = *coppy++;
 	}
 	return (dest);
 }
 
+/*
+struct {
+  char name[40];
+  int age;
+} person, person_copy;
 
-int	main(void)
+int main ()
 {
-	char	*test = "salut mec";
-	char	*retour = "Ca joue?";
+  char myname[] = "Pierre de Fermat";
 
-	printf("string avant memcpy : %s\n", test);
-	ft_memcpy(retour, test, 5);
-	printf("string avant memcpy : %s\n", test);
-	return 0;
-}
+  ft_memcpy ( person.name, myname, strlen(myname)+1 );
+  person.age = 46;
+
+  ft_memcpy ( &person_copy, &person, sizeof(person) );
+
+  printf ("person_copy: %s, %d \n", person_copy.name, person_copy.age );
+
+  return 0;
+}*/

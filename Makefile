@@ -31,6 +31,9 @@ $(NAME): $(MY_OBJECTS)
 	ar rcs $(NAME) $(MY_OBJECTS)
 	ranlib $(NAME)
 
+$(OBJS): $(LIST)
+	$(CC) -c $(CFLAGS) $(NAME)
+
 clean:
 	rm -f *.o
 
