@@ -14,8 +14,7 @@
 //#include <unistd.h>
 //#include <stdio.h>
 
-
-void	*ft_memcpy(void *dest, const void * src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*coppy;
 	unsigned char	*paste;
@@ -24,7 +23,7 @@ void	*ft_memcpy(void *dest, const void * src, size_t n)
 		return (dest);
 	coppy = (unsigned char *)src;
 	paste = (unsigned char *)dest;
-	while(n--)
+	while (n--)
 	{
 		*paste++ = *coppy++;
 	}
