@@ -11,26 +11,37 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <sting.h>
-#include <stdio.h>
+//#include <sting.h>
+//#include <stdio.h>
 
-char	*ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+char	*ft_strlcpy(char * restrict dest, const char * restrict src, size_t dstsize)
 {
 	int	i;
+	char * s;
+	char * d;
 
-    if (dst == NULL)
+    if (dest == NULL)
 		return (dstsize);
 	if (dstsize == 0)
 		return (ft_strlen(src));
 
 	i = 0;
-	while (*(src + i) != '\0')
-	{	
-		dest[i] = src[i];
+	s = (char *)src;
+	d = dest;
+
+	}
+	while (i < (int)dstsize - 1)
+	{
+		if (!s[i])
+		{
+			d[i] = 0;
+			return (ft_strlen(src));
+		}
+		d[i] = s[i];
 		i++;
 	}
-	*(dest + i) = '\0';
-	return (dest);
+	d[i] = 0;
+	return (ft_strlen(src));
 }
 /*
 int	main(void)
