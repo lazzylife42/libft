@@ -14,8 +14,6 @@
 //#include <sting.h>
 //#include <stdio.h>
 
-strlcat(char *dst, const char *src, size_t size);
-
 char	*ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
 	int		i;

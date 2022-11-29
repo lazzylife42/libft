@@ -6,7 +6,7 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 12:58:34 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/11/28 23:57:00 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/11/29 02:56:14 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -29,14 +29,14 @@ char	*ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*ft_strlcat(char *dest, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-char	*strchr(const char *s, int c);
-char	*strrchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(char *s1, char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 int		ft_atoi(char *str);
-void	*calloc(size_t nmemb, size_t size);
+void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(char *src);
 
 #endif
