@@ -53,7 +53,7 @@ clean:
 	$(RM) $(MY_OBJECTS)
 
 fclean: clean
-	$(RM) $(MY_SOURCES)
+	$(RM) $(NAME)
 
 re: clean all
 
