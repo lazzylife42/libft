@@ -1,0 +1,8 @@
+flag error :
+    ft_strrchr.c
+
+flag warning:
+    ft_strlcpy.c
+    ft_strlcat.c
+    ft_toupper.c
+    ft_tolower.c

@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	while (*s != '\0')
 	{
-		&buffer = ft_strchr(c);
+		&buffer = ft_strchr(s, c);
 	}
 	return (buffer);
 }
