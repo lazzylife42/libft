@@ -14,23 +14,25 @@
 //#include <stdio.h>
 //#include <string.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*coppy;
-	unsigned char	*paste;
+	char	*temp;
+	size_t	i;
 
-	if (dest == src)
-		return (dest);
-	if (dest <= src)
+	temp = (char *)src;
+	i = 0;
+	if ((char *)dst == temp)
+		return (dst);
+	else if ((char *)dst > temp)
+		while (len-- > 0)
+			((char *)dst)[len] = temp[len];
+	else
 	{
-		ft_memcpy(dest, src, n);
-		return (dest);
+		while (i < len)
+		{
+			((char *)dst)[i] = temp[i];
+			i++;
+		}
 	}
-	coppy = (unsigned char *)src + n - 1;
-	paste = (unsigned char *)dest + n - 1;
-	while (n--)
-	{
-		*paste++ = *coppy++;
-	}
-	return (dest);
+	return (dst);
 }

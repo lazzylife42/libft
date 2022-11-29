@@ -1,0 +1,73 @@
+For ft_strchr, in /Users/sabino/francinette/tests/libft/fsoares/test_strchr.c:
+
+Error in test 5: ft_strchr(0x100efefa0: "teste", 357: 'e'): expected: 0x100efefa1, yours: 0x0
+Error in test 6: ft_strchr(0x100efefa0: "teste", 1024: '\0'): expected: 0x100efefa5, yours: 0x0
+
+For ft_strncmp, in /Users/sabino/francinette/tests/libft/fsoares/test_strncmp.c:
+
+Error in test 4: ft_strncmp("test", "", 0): 
+expected sign: 0 (value: 0), yours sign: 1 (value: 116)
+
+Error in test 7: ft_strncmp("", "test", 0): 
+expected sign: 0 (value: 0), yours sign: -1 (value: -116)
+
+
+For ft_strnstr, in /Users/sabino/francinette/tests/libft/fsoares/test_strnstr.c:
+
+Error in test 3: ft_strnstr(0x1042efe40: "", "", 0): expected: 0x1042efe40, yours: 0x0
+Error in test 4: ft_strnstr(0x1042efe40: "", "", 1): expected: 0x1042efe40, yours: 0x0
+Error in test 5: ft_strnstr(0x1042efe40: "", "", 2): expected: 0x1042efe40, yours: 0x0
+Error in test 9: ft_strnstr(0x1042eee60: "teste", "", 0): expected: 0x1042eee60, yours: 0x0
+
+For ft_atoi, in /Users/sabino/francinette/tests/libft/fsoares/test_atoi.c:
+
+Error in test 6: atoi("--123"): expected: 0, yours: 123
+Error in test 7: atoi("-+123"): expected: 0, yours: -123
+Error in test 8: atoi("+-123"): expected: 0, yours: -123
+Error in test 9: atoi("++123"): expected: 0, yours: 123
+
+For ft_strdup, in /Users/sabino/francinette/tests/libft/fsoares/test_strdup.c:
+
+Error in test 1: ft_strdup(""): expected: "", got: <NULL>
+Error in test 1: ft_strdup(""): not enough memory allocated, needed: 1, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+Error in test 1: ft_strdup(""): 
+Memory leak: 0x106400710 - 1 bytes
+You failed to free the memory allocated at:
+     in _add_malloc malloc_mock.c:29:10
+     in malloc malloc_mock.c:75:10
+2   test_strdup.out                     0x0000000100aeaa40 ft_strdup + 52
+3   test_strdup.out                     0x0000000100ae47e0 single_test_strdup + 84
+4   test_strdup.out                     0x0000000100ae48b0 test_strdup + 36
+5   test_strdup.out                     0x0000000100ae4a30 main + 184
+6   dyld                                0x00000001acb77e50 start + 2544
+
+Error in test 2: ft_strdup("sadfvbf"): expected: "sadfvbf", got: <NULL>
+Error in test 2: ft_strdup("sadfvbf"): not enough memory allocated, needed: 8, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+Error in test 2: ft_strdup("sadfvbf"): 
+Memory leak: 0x1064006f0 - 8 bytes
+You failed to free the memory allocated at:
+0   test_strdup.out                     0x0000000100ae4f44 _add_malloc + 704
+1   test_strdup.out                     0x0000000100ae4c74 malloc + 340
+2   test_strdup.out                     0x0000000100aeaa40 ft_strdup + 52
+3   test_strdup.out                     0x0000000100ae47e0 single_test_strdup + 84
+4   test_strdup.out                     0x0000000100ae48f4 test_strdup + 104
+5   test_strdup.out                     0x0000000100ae4a30 main + 184
+6   dyld                                0x00000001acb77e50 start + 2544
+
+Error in test 3: ft_strdup("fdfjkdf\n35346"): expected: "fdfjkdf\n35346", got: <NULL>
+Error in test 3: ft_strdup("fdfjkdf\n35346"): not enough memory allocated, needed: 14, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+Error in test 3: ft_strdup("fdfjkdf\n35346"): 
+Memory leak: 0x1064006d0 - 14 bytes
+You failed to free the memory allocated at:
+0   test_strdup.out                     0x0000000100ae4f44 _add_malloc + 704
+1   test_strdup.out                     0x0000000100ae4c74 malloc + 340
+2   test_strdup.out                     0x0000000100aeaa40 ft_strdup + 52
+3   test_strdup.out                     0x0000000100ae47e0 single_test_strdup + 84
+4   test_strdup.out                     0x0000000100ae4938 test_strdup + 172
+5   test_strdup.out                     0x0000000100ae4a30 main + 184
+6   dyld                                0x00000001acb77e50 start + 2544
+
+

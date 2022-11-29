@@ -14,8 +14,10 @@
 //#include <sting.h>
 //#include <stdio.h>
 
-void	ft_toupper(int c)
-{	
+int	ft_toupper(int c)
+{
 	if (c >= 'a' && c <= 'z')
-		c -= 32;
+		return (c - 32);
+	else
+		return (c);
 }

@@ -14,8 +14,10 @@
 //#include <sting.h>
 //#include <stdio.h>
 
-void	ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		c += 32;
+		return (c + 32);
+	else
+		return (c);
 }
