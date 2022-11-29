@@ -14,29 +14,24 @@
 //#include <sting.h>
 //#include <stdio.h>
 
-char	*ft_strlcat(char *dest, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int		i;
-	char	*s;
-	char	*d;
+	size_t	i;
+	size_t	j;
+	size_t	res;
 
-	if (dest == NULL)
-		return (dstsize);
-	if (dstsize == 0)
-		return (ft_strlen(src));
-	i = 0;
-	s = (char *)src;
-	d = dest;
-	while (i < (int)dstsize - 1)
+	i = ft_strlen(dst);
+	j = 0;
+	if (dstsize > i)
+		res = ft_strlen((char *)src) + i;
+	else
+		res = ft_strlen((char *)src) + dstsize;
+	while (src[j] != '\0' && i + 1 < dstsize)
 	{
-		if (!s[i])
-		{
-			d[i] = 0;
-			return (ft_strlen(src));
-		}
-		d[i] = s[i];
+		dst[i] = src[j];
 		i++;
+		j++;
 	}
-	d[i] = 0;
-	return (ft_strlen(src));
+	dst[i] = '\0';
+	return (res);
 }

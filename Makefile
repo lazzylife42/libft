@@ -13,6 +13,7 @@
 NAME = libft.a
 CC = gcc
 CFLACGS = -Wall -Wextra -Werror
+RM = rm -f
 
 MY_SOURCES =	ft_isalpha.c \
 				ft_isdigit.c \
@@ -49,10 +50,10 @@ all: $(NAME)
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 clean:
-	rm -f $(MY_OBJECTS)
+	$(RM) $(MY_OBJECTS)
 
-fclean:
-	rm -f $(MY_SOURCES)
+fclean: clean
+	$(RM) $(MY_SOURCES)
 
 re: clean all
 

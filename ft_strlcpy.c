@@ -14,30 +14,19 @@
 //#include <sting.h>
 //#include <stdio.h>
 
-char	*ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int		i;
-	char	*s;
-	char	*d;
+	size_t	i;
 
-	if (dest == NULL)
-		return (NULL);
-	if (size == 0)
-		return (ft_strlen(src));
 	i = 0;
-	s = (char *)src;
-	d = dest;
-	while (i < (int)size - 1)
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && i < (dstsize - 1))
 	{
-		if (!s[i])
-		{
-			d[i] = 0;
-			return (ft_strlen(src));
-		}
-		d[i] = s[i];
+		dst[i] = src[i];
 		i++;
 	}
-	d[i] = 0;
+	dst[i] = '\0';
 	return (ft_strlen(src));
 }
 /*
