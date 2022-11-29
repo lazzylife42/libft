@@ -6,7 +6,7 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:55:53 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/11/09 13:58:32 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/11/29 01:29:49 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (dest == src)
 		return (dest);
 	if (dest <= src)
+	{
 		ft_memcpy(dest, src, n);
 		return (dest);
+	}
 	coppy = (unsigned char *)src + n - 1;
 	paste = (unsigned char *)dest + n - 1;
 	while (n--)

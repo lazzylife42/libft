@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_isascii(int c)
 {
 	if ((c >= 0 && c <= 177) && ((c % 10) <= 7))
 		return (1);

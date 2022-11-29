@@ -6,7 +6,7 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:32:30 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/11/09 18:32:38 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/11/29 01:33:02 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,19 @@
 
 strlcat(char *dst, const char *src, size_t size);
 
-char	*ft_strlcat(char * restrict dest, const char * restrict src, size_t dstsize)
+char	*ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-	int	i;
-	char * s;
-	char * d;
+	int		i;
+	char	*s;
+	char	*d;
 
-    if (dest == NULL)
+	if (dest == NULL)
 		return (dstsize);
 	if (dstsize == 0)
 		return (ft_strlen(src));
-
 	i = 0;
 	s = (char *)src;
 	d = dest;
-
-	}
 	while (i < (int)dstsize - 1)
 	{
 		if (!s[i])

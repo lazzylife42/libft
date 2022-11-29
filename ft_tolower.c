@@ -6,7 +6,7 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 20:20:58 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/11/11 20:21:32 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/11/29 00:06:02 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 //#include <sting.h>
 //#include <stdio.h>
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
-	
 	if (c >= 'A' && c <= 'Z')
 		c += 32;
 }

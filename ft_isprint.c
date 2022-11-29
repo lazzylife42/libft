@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_isprint(int c)
 {
 	if ((c >= 40 && c <= 176) && ((c % 10) <= 7))
 		return (1);

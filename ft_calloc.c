@@ -6,16 +6,16 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 19:17:54 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/11/25 19:18:20 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/11/29 01:35:02 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdlib.h>
 
-void *calloc(size_t nmemb, size_t size)
+void	*calloc(size_t nmemb, size_t size)
 {
-    void	*mem;
+	void	*mem;
 	size_t	total;
 
 	total = nmemb * size;
