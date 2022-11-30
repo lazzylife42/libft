@@ -11,21 +11,19 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <sting.h>
-//#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
+	char	*ptr;
 
 	i = 0;
-	while (s[i])
+	ptr = (char *)s;
+	while (ptr[i] != (char)c)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
+		if (ptr[i] == '\0')
+			return (NULL);
 		i++;
 	}
-	if (!c && s[i] == '\0')
-		return ((char *)s + i);
-	return (NULL);
+	return (&ptr[i]);
 }
