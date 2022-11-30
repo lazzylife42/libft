@@ -1,59 +1,30 @@
-For ft_strnstr, in /Users/sabino/francinette/tests/libft/fsoares/test_strnstr.c:
+= Host-specific information ====================================================
+$> hostname; uname -msr
+sab
+Darwin 22.1.0 arm64
+$> date
+Mer 30 nov 2022 20:49:23 CET
+$> gcc --version
+Apple clang version 14.0.0 (clang-1400.0.29.202)
+Target: arm64-apple-darwin22.1.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple clang version 14.0.0 (clang-1400.0.29.202)
+Target: arm64-apple-darwin22.1.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address main.c libft.a -o user_exe
 
-Error in test 3: ft_strnstr(0x100b8fe40: "", "", 0): expected: 0x100b8fe40, yours: 0x0
-Error in test 4: ft_strnstr(0x100b8fe40: "", "", 1): expected: 0x100b8fe40, yours: 0x0
-Error in test 5: ft_strnstr(0x100b8fe40: "", "", 2): expected: 0x100b8fe40, yours: 0x0
-Error in test 9: ft_strnstr(0x100b8ee60: "teste", "", 0): expected: 0x100b8ee60, yours: 0x0
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+--- /Users/sabino/francinette/temp/libft/war-machine/tests/Part1_functions/ft_strdup/user_output_test01	2022-11-30 20:49:23$
++++ /Users/sabino/francinette/temp/libft/war-machine/tests/Part1_functions/ft_strdup/test01.output	2022-11-04 16:04:53$
+@@ -1 +1 @@$
+-lorem ipsum d$
+\ No newline at end of file$
++lorem ipsum dolor sit amet$
+\ No newline at end of file$
 
-For ft_atoi, in /Users/sabino/francinette/tests/libft/fsoares/test_atoi.c:
-
-Error in test 6: atoi("--123"): expected: 0, yours: 123
-Error in test 7: atoi("-+123"): expected: 0, yours: -123
-Error in test 8: atoi("+-123"): expected: 0, yours: -123
-Error in test 9: atoi("++123"): expected: 0, yours: 123
-
-For ft_strdup, in /Users/sabino/francinette/tests/libft/fsoares/test_strdup.c:
-
-Error in test 1: ft_strdup(""): expected: "", got: <NULL>
-Error in test 1: ft_strdup(""): not enough memory allocated, needed: 1, reserved: 0
-Could not find the corresponding allocation or the pointer 0x0
-Error in test 1: ft_strdup(""): 
-Memory leak: 0x107f00710 - 1 bytes
-You failed to free the memory allocated at:
-     in _add_malloc malloc_mock.c:29:10
-     in malloc malloc_mock.c:75:10
-2   test_strdup.out                     0x0000000102526a40 ft_strdup + 52
-3   test_strdup.out                     0x00000001025207e0 single_test_strdup + 84
-4   test_strdup.out                     0x00000001025208b0 test_strdup + 36
-5   test_strdup.out                     0x0000000102520a30 main + 184
-6   dyld                                0x00000001acb77e50 start + 2544
-
-Error in test 2: ft_strdup("sadfvbf"): expected: "sadfvbf", got: <NULL>
-Error in test 2: ft_strdup("sadfvbf"): not enough memory allocated, needed: 8, reserved: 0
-Could not find the corresponding allocation or the pointer 0x0
-Error in test 2: ft_strdup("sadfvbf"): 
-Memory leak: 0x107f006f0 - 8 bytes
-You failed to free the memory allocated at:
-0   test_strdup.out                     0x0000000102520f44 _add_malloc + 704
-1   test_strdup.out                     0x0000000102520c74 malloc + 340
-2   test_strdup.out                     0x0000000102526a40 ft_strdup + 52
-3   test_strdup.out                     0x00000001025207e0 single_test_strdup + 84
-4   test_strdup.out                     0x00000001025208f4 test_strdup + 104
-5   test_strdup.out                     0x0000000102520a30 main + 184
-6   dyld                                0x00000001acb77e50 start + 2544
-
-Error in test 3: ft_strdup("fdfjkdf\n35346"): expected: "fdfjkdf\n35346", got: <NULL>
-Error in test 3: ft_strdup("fdfjkdf\n35346"): not enough memory allocated, needed: 14, reserved: 0
-Could not find the corresponding allocation or the pointer 0x0
-Error in test 3: ft_strdup("fdfjkdf\n35346"): 
-Memory leak: 0x107f006d0 - 14 bytes
-You failed to free the memory allocated at:
-0   test_strdup.out                     0x0000000102520f44 _add_malloc + 704
-1   test_strdup.out                     0x0000000102520c74 malloc + 340
-2   test_strdup.out                     0x0000000102526a40 ft_strdup + 52
-3   test_strdup.out                     0x00000001025207e0 single_test_strdup + 84
-4   test_strdup.out                     0x0000000102520938 test_strdup + 172
-5   test_strdup.out                     0x0000000102520a30 main + 184
-6   dyld                                0x00000001acb77e50 start + 2544
-
-
+Diff KO :(
