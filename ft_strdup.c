@@ -22,7 +22,10 @@ char	*ft_strdup(const char *src)
 	if (!new)
 		return (NULL);
 	while (src[i] != '\0')
-		new[i++] = *src++;
+	{
+		new[i] = src[i];
+		i++;
+	}
 	new[i] = '\0';
 	return (new);
 }
