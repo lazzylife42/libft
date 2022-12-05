@@ -1,2 +1,2 @@
 Failed tests: 
-     strrchr, strnstr, memmove, libftTester
+     strnstr, memmove, strrchr
