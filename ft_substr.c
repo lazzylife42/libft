@@ -6,7 +6,7 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 23:32:09 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/12/01 23:32:58 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:48:25 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(new, (char *)s + start, len + 1);
 	return (new);
 }
+

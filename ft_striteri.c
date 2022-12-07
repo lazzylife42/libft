@@ -6,7 +6,7 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 22:03:05 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/12/07 22:03:59 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:44:10 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,4 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+

@@ -6,13 +6,11 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 20:20:58 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/11/29 00:06:02 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:48:54 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <sting.h>
-//#include <stdio.h>
 
 int	ft_tolower(int c)
 {
@@ -21,3 +19,4 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
+

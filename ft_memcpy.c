@@ -6,13 +6,11 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 14:22:35 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/11/04 14:45:31 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:37:25 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <unistd.h>
-//#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

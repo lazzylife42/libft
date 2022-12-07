@@ -6,7 +6,7 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:18:08 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/10/24 15:19:38 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:45:53 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,3 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-/*
-int	main(int argc, char **argv)
-{
-	char str[]; 
-	= argv[1];
-	printf("len : %d\n", ft_strlen(str));
-
-	return (0);
-}
-*/

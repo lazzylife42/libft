@@ -6,13 +6,11 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 20:07:41 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/11/29 00:05:45 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:49:08 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <sting.h>
-//#include <stdio.h>
 
 int	ft_toupper(int c)
 {
@@ -21,3 +19,4 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
+

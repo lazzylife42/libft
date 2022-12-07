@@ -6,7 +6,7 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:46:12 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/12/07 21:46:36 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:46:34 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,4 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+

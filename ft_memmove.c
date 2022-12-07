@@ -6,13 +6,11 @@
 /*   By: smonte-e <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:55:53 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/11/29 01:29:49 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:38:30 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

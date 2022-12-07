@@ -6,7 +6,7 @@
 /*   By: smonte-e <smonte-e@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 14:45:39 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/12/02 14:45:49 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:44:51 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(new, (char *)s2, ft_strlen(s1) + ft_strlen(s2) + 1);
 	return (new);
 }
+
