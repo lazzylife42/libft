@@ -12,28 +12,49 @@
 
 #include "libft.h"
 
-char *ft_itoa(int n)
+static int	ft_intlen(long n)
 {
-	char	*new;
-	int		i;
-	int		j;
-	
-	i = 0;
-	j = 0;
-	while ((n % 10) > 0)
-		i++;
-	new = (char *)malloc(sizeof(char) * (i + 1) + 1);
+	int	len;
+
+	len = 0;
 	if (n < 0)
 	{
-		new[j] = '-';
-		j++;
+		n *= -1;
+		len++;
 	}
-	while (i > 0)
+	else if (n == 0)
+		len++;
+	while (n > 0)
 	{
-		new[j] = n % 10;
-		i--;
-		j++;
+		n /= 10;
+		len++;
 	}
-	new[j] = '\0';
-	return (new);
+	return (len);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	long	number;
+	size_t	i;
+
+	number = n;
+	i = ft_intlen(number);
+	str = (char *)malloc((i + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	if (number < 0)
+	{
+		number *= -1;
+		str[0] = '-';
+	}
+	str[i--] = '\0';
+	if (number == 0)
+		str[i] = '0';
+	while (number > 0)
+	{
+		str[i--] = (number % 10) + '0';
+		number /= 10;
+	}
+	return (str);
 }
