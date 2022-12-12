@@ -39,6 +39,7 @@ int	ft_atoi(char *str)
 	}	
 	return (signe * cache);
 }
+
 /*
 #include <stdio.h>
 int main(int argc, char *argv[])
