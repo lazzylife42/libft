@@ -6,7 +6,7 @@
 /*   By: smonte-e <smonte-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:10:33 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/12/12 22:46:17 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/12 23:14:29 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	word_numb(char *str, char c)
 	w_count = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] != c && last == c)
+		if (last == c && str[i] != c)
 			w_count++;
 		last = str[i];
 		i++;
@@ -46,15 +46,13 @@ static int	word_numb(char *str, char c)
 	return (w_count);
 }
 
-static char	*word_dup(char *str, int start, int end)
+static char	*word_dup(char *str, size_t start, size_t end)
 {
 	int		i;
-	int		w_size;
 	char	*word;
 
 	i = 0;
-	w_size = end - start;
-	word = (char *)malloc(sizeof(char) * (w_size) + 1);
+	word = (char *)malloc((end - start + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
 	while (start < end)
@@ -72,24 +70,24 @@ char	**ft_split(char const *s, char c)
 	char	**split;
 	size_t	i;
 	size_t	j;
-	int		flag;
+	int		w_start;
 
 	split = (char **)malloc((word_numb(s, c) + 1) * sizeof(char *));
 	if (!s || !split)
 		return (NULL);
 	i = -1;
 	j = 0;
-	flag = -1;
+	w_start = -1;
 	while (i++ <= ft_strlen(s))
 	{
-		if (s[i] != c && flag < 0)
-			flag = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && flag >= 0)
+		if (s[i] != c && w_start < 0)
+			w_start = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && w_start >= 0)
 		{
-			split[j] = word_dup(s, flag, i);
+			split[j] = word_dup(s, w_start, i);
 			if (!(split[j++]))
 				return (free_arr(split));
-			flag = -1;
+			w_start = -1;
 		}	
 	}
 	split[j] = NULL;
