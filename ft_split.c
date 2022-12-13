@@ -6,7 +6,7 @@
 /*   By: smonte-e <smonte-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:10:33 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/12/13 11:51:29 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/13 15:47:38 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static char	**free_arr(char **tab)
 	int	i;
 
 	i = 0;
-	while (tab[i] != '\0')
+	while ((char *)tab[i] != NULL)
 	{
 		free(tab[i]);
 		i++;
@@ -27,7 +27,7 @@ static char	**free_arr(char **tab)
 	return (NULL);
 }
 
-static int	word_numb(char *str, char c)
+static int	word_numb(const char *str, char c)
 {
 	char	last;
 	int		i;
@@ -46,7 +46,7 @@ static int	word_numb(char *str, char c)
 	return (w_count);
 }
 
-static char	*word_dup(char *str, size_t start, size_t end)
+static char	*word_dup(const char *str, size_t start, size_t end)
 {
 	int		i;
 	char	*word;
