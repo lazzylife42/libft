@@ -6,7 +6,7 @@
 /*   By: smonte-e <smonte-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:10:33 by smonte-e          #+#    #+#             */
-/*   Updated: 2022/12/12 23:14:29 by smonte-e         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:51:29 by smonte-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 	i = -1;
 	j = 0;
 	w_start = -1;
-	while (i++ <= ft_strlen(s))
+	while (++i <= ft_strlen(s))
 	{
 		if (s[i] != c && w_start < 0)
 			w_start = i;
