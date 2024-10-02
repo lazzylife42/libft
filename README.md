@@ -8,7 +8,7 @@ Pour compiler votre projet avec la bibliothèque libft, vous pouvez suivre les �
 
 1. Cloner le repository libft dans votre projet :
    ```sh
-   git clone https://github.com/lazzylife42/42.git && cd 42/libft
+   git clone https://github.com/lazzylife42/libft.git && cd libft
    ```
 
 2. Compilation avec Makefile et inclusion de la bibliothèque libft
